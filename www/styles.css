@@ -1,0 +1,19 @@
+#boxControls {
+  /* Appearance */
+  background-color: #fff;
+  padding: 0 20px 20px 20px;
+  /* Fade out while not hovering */
+  opacity: 1;
+  zoom: 0.9;
+  transition: opacity 500ms 1s;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 900;
+}
+#boxControls:hover {
+  /* Fade in while hovering */
+  opacity: 0.75;
+  transition-delay: 0;
+}
