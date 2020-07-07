@@ -20,13 +20,26 @@ produtoView <- function(){
             box(
               dataTableOutput("Produtos"),
               width = 6
+            ),
+            box(
+              sliderInput("valor", "Number of observations:",
+                          min = 0, max = 1000, value = 500
+              ),
+              switchInput(inputId = "disp", onLabel = "Sim", offLabel = "Não",
+                          size = "mini"
+              ),
+              submitButton("saveButton", icon("save"))
             )
           ),
           fluidRow(
             box(
-              verbatimTextOutput("Selecionado"),
-              width = 12
-            )
+              dataTableOutput("Selecionado"),
+              width = 6
+            ),
+            box(
+              verbatimTextOutput("valor")
+            ),
+            box(verbatimTextOutput("disp"))
           ),
           fluidRow(
             box(

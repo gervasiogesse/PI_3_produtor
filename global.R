@@ -8,6 +8,7 @@ suppressPackageStartupMessages({
   library(data.table)
   library(plotly)
   library(htmltools)
+  library(shinyWidgets)
   # Biblioteca para autenticacao
   library(polished)
   
