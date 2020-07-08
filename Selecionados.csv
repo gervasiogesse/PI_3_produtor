@@ -1,2 +1,6 @@
-"","prd","img","valor","Disponivel","emailId","semana"
-"1","alface","<img src=./img/alface.png width=50%>",500,TRUE,"gervasio.81@gmail.com","28"
+"prd","img","valor","Disponivel","emailId","semana"
+"banana","<img src=./img/banana.png width=50%>",1,FALSE,"gervasio.81@gmail.com","28"
+"tomate","<img src=./img/tomate.png width=50%>",1,FALSE,"gervasio.81@gmail.com","28"
+"alface","<img src=./img/alface.png width=50%>",100,FALSE,"gervasio.81@gmail.com","28"
+"brocoli","<img src=./img/brocoli.png width=50%>",85,TRUE,"gervasio.81@gmail.com","28"
+"maca","<img src=./img/maca.png width=50%>",85,FALSE,"gervasio.81@gmail.com","28"

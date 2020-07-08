@@ -17,17 +17,19 @@ produtoController <- function(input, output, session){
                                  semana=semanaAtual()
                                  )
       # Selecionados <- dfProdutos %>% slice(indicePdt)
-      print(head(Selecionados))
-      write.csv(Selecionados, "Selecionados.csv")
+      # print(head(Selecionados))
+      updt <- rbind(Selecionados, read.csv("Selecionados.csv")) %>% distinct(prd,emailId,semana, .keep_all = TRUE)
+      print(Selecionados)
+      print(updt)
+      write.csv(updt, file = "Selecionados.csv", row.names = FALSE)
+      replaceData(proxyTableSites, updt %>% filter(Disponivel == "TRUE"))
     }
   })
   
   #--------------------------- Condutores reativos ------------------------------------------------
-  rowSelect <- eventReactive(input$saveButton, {
-    read.csv("Selecionados.csv")
-  })
+
   # ------------------------Proxy da tabela-----------------------------------------
-  
+  proxyTableSites <- dataTableProxy('Selecionado')
   #-------------------------- Saidas --------------------------------------------------------------
   
   # output$Produtos <- renderDataTable({datatable(dfProdutos, escape = FALSE)})
@@ -41,7 +43,7 @@ produtoController <- function(input, output, session){
                 )
           })
   output$Selecionado <- renderDataTable({datatable(
-    rowSelect()
+    read.csv("Selecionados.csv") %>% filter(Disponivel == "TRUE"),selection="none",escape=F, extensions = c('Scroller', 'Responsive')
   )})
   output$valor <- renderText({input$valor})
   output$disp <- renderText({input$disp})

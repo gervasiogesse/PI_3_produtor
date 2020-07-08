@@ -22,8 +22,8 @@ produtoView <- function(){
               width = 6
             ),
             box(
-              sliderInput("valor", "Number of observations:",
-                          min = 0, max = 1000, value = 500
+              sliderInput("valor", "Valor R$",
+                          min = 0.5, max = 100, value = 1.0
               ),
               switchInput(inputId = "disp", onLabel = "Sim", offLabel = "Não",
                           size = "mini"
@@ -34,28 +34,6 @@ produtoView <- function(){
           fluidRow(
             box(
               dataTableOutput("Selecionado"),
-              width = 6
-            ),
-            box(
-              verbatimTextOutput("valor")
-            ),
-            box(verbatimTextOutput("disp"))
-          ),
-          fluidRow(
-            box(
-              verbatimTextOutput("dateText"),
-              width = 12
-            )
-          ),
-          fluidRow(
-            box(
-              verbatimTextOutput("usuario"),
-              width = 12
-            )
-          ),
-          fluidRow(
-            box(
-              verbatimTextOutput("email"),
               width = 12
             )
           )

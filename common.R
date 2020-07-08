@@ -48,7 +48,9 @@ semanaAtual <- function(){
 
 #Todo
 # Função para gravar o dataframe e fazer update usando como chave o emailId,produto,semana
-
+dfUpdate <- function(df1, df2){
+  rbind(df1,df2) %>% distinct(prd,emailId,semana, .keep_all = TRUE)
+}
 
 
 
