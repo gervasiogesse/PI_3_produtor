@@ -5,12 +5,14 @@
 #--------------------------------------------------------------------
 
 # Define o servidor
-shinyServer(function(input, output, session) {
-# secure_server(function(input, output, session) {
+# shinyServer(function(input, output, session) {
+secure_server(function(input, output, session) {
   # Para o processo quando o navegador for fechado
   session$onSessionEnded(function() { stopApp() })
   
   # Para cada pagina é adicionado um arquivo controller
   produtoController(input,output,session)
+  pedidosController(input,output,session)
+  relatorioController(input,output,session)
   logoutController(input,output,session)
 })

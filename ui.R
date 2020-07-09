@@ -7,7 +7,7 @@
 
 ## ui.R ##
 ## Autenticacao
-# secure_ui(
+secure_ui(
 
 # Inicia a página do dashboard adiciona o logo o link e o titulo
 # que aparece na barra de endereço
@@ -27,8 +27,10 @@ dashboardPage(
     # Carrega os itens do corpo do app
     tabItems(
       produtoView(),
+      pedidosView(),
+      relatorioView(),
       logoutView()
     )
   )
 )
-# )
+)

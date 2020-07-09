@@ -11,6 +11,8 @@ MenuPrincipal <- function() {
     #-------------------------Menu Dashboard----------------------------
     #menuSubItem("Dashboard Sites", tabName = "Sites", icon = icon("th")),
     menuItem("Cadastro Produto", tabName = "Produto", icon = icon("th")),
+    menuItem("Meus Pedidos", tabName = "Pedidos", icon = icon("th")),
+    menuItem("Regressão Linear", tabName = "Relatorio", icon = icon("th")),
     
     #------------------------Menu Logout--------------------------------
     menuItem("LogOut", tabName = "logout", icon = icon("sign-out-alt")),

@@ -16,10 +16,15 @@ suppressPackageStartupMessages({
   source("MenuPrincipal.R", local = TRUE)
   source("produtoView.R", local = TRUE)
   source("produtoController.R", local = TRUE)
+  source("pedidosView.R", local = TRUE)
+  source("pedidosController.R", local = TRUE)
   source("logoutView.R", local = TRUE)
   source("logoutController.R", local = TRUE)
+  source("relatorioView.R", local = TRUE)
+  source("relatorioController.R", local = TRUE)
 })
-# global_sessions_config( 
-#   app_name = "pi_3_produtor",
-#   api_key = "SHMA2UKkAttxQq6p082bcCc6160hkPe91Q"
-# )
+dfrl <- read.csv("historico.csv")
+global_sessions_config(
+  app_name = "pi_3_produtor",
+  api_key = "SHMA2UKkAttxQq6p082bcCc6160hkPe91Q"
+)
